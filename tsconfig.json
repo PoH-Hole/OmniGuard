@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+, "app/loading.jsx", "app/not-found.jsx", "components/pages/Sensors/components/HealthScore.jsx", "components/pages/Sensors/SensorsPage.jsx", "components/pages/Sensors/components/NextService.jsx", "components/pages/Sensors/components/DurabilityCard.jsx", "components/pages/Sensors/components/EfficiencyChart.jsx", "components/pages/Sensors/components/SensorTable.jsx"  ],
+  "exclude": ["node_modules"]
+}

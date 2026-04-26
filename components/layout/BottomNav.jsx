@@ -5,12 +5,12 @@ import { usePathname } from "next/navigation";
 import { Home, Map, Cpu, Brain, FileText, BookOpen } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "/home", icon: Home },
-  { name: "Map", href: "/map", icon: Map },
-  { name: "Sensor", href: "/sensors", icon: Cpu },
-  { name: "AI", href: "/ai", icon: Brain },
-  { name: "Logs", href: "/logs", icon: FileText },
-  { name: "E-Learn", href: "/elearn", icon: BookOpen },
+  { name: "Home", href: "/home", icon: Home, color: "text-blue-600", bg: "bg-blue-100" },
+  { name: "Map", href: "/map", icon: Map, color: "text-green-600", bg: "bg-green-100" },
+  { name: "Sensor", href: "/sensors", icon: Cpu, color: "text-orange-600", bg: "bg-orange-100" },
+  { name: "AI", href: "/ai", icon: Brain, color: "text-pink-600", bg: "bg-pink-100" },
+  { name: "Logs", href: "/logs", icon: FileText, color: "text-gray-600", bg: "bg-gray-100" },
+  { name: "E-Learn", href: "/elearn", icon: BookOpen, color: "text-purple-600", bg: "bg-purple-100" },
 ];
 
 export default function BottomNav() {
@@ -26,25 +26,14 @@ export default function BottomNav() {
           return (
             <Link key={item.name} href={item.href} className="flex-1">
               <div
-                className={`flex flex-col items-center justify-center text-[9px] transition
-                ${
-                  isActive
-                    ? item.name === "E-Learn"
-                      ? "text-purple-600"
-                      : "text-blue-600"
-                    : "text-gray-500"
+                className={`flex flex-col items-center justify-center text-[9px] transition ${
+                  isActive ? item.color : "text-gray-500"
                 }`}
               >
                 <div
                   className={`
                     p-1.5 rounded-lg transition
-                    ${
-                      isActive
-                        ? item.name === "E-Learn"
-                          ? "bg-purple-100"
-                          : "bg-blue-100"
-                        : ""
-                    }
+                    ${isActive ? item.bg : ""}
                   `}
                 >
                   <Icon size={18} />

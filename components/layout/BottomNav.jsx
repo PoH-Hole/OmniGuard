@@ -10,7 +10,7 @@ const navItems = [
   { name: "Sensor", href: "/sensors", icon: Cpu, color: "text-orange-600", bg: "bg-orange-100" },
   { name: "AI", href: "/ai", icon: Brain, color: "text-pink-600", bg: "bg-pink-100" },
   { name: "Logs", href: "/logs", icon: FileText, color: "text-gray-600", bg: "bg-gray-100" },
-  { name: "E-Learn", href: "/elearn", icon: BookOpen, color: "text-purple-600", bg: "bg-purple-100" },
+  { name: "E-Learn", href: "/E-Learn", icon: BookOpen, color: "text-purple-600", bg: "bg-purple-100" },
 ];
 
 export default function BottomNav() {
@@ -19,9 +19,13 @@ export default function BottomNav() {
   return (
     <nav className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md z-50">
       <div className="flex justify-around items-center py-1">
+
         {navItems.map((item) => {
-          const isActive = pathname === item.href;
           const Icon = item.icon;
+
+          const isActive =
+            pathname === item.href ||
+            pathname.startsWith(item.href + "/");
 
           return (
             <Link key={item.name} href={item.href} className="flex-1">
@@ -31,10 +35,9 @@ export default function BottomNav() {
                 }`}
               >
                 <div
-                  className={`
-                    p-1.5 rounded-lg transition
-                    ${isActive ? item.bg : ""}
-                  `}
+                  className={`p-1.5 rounded-lg transition ${
+                    isActive ? item.bg : ""
+                  }`}
                 >
                   <Icon size={18} />
                 </div>
@@ -46,6 +49,7 @@ export default function BottomNav() {
             </Link>
           );
         })}
+
       </div>
     </nav>
   );

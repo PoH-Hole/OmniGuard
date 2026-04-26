@@ -5,6 +5,7 @@ import { Layers, Flame } from "lucide-react";
 export default function FacilitySection() {
   return (
     <div className="bg-white rounded-2xl shadow-sm border p-4 space-y-4">
+      
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div>
@@ -28,8 +29,14 @@ export default function FacilitySection() {
       </div>
 
       {/* Map Preview */}
-      <div className="relative h-64 md:h-80 bg-gray-200 rounded-xl flex items-center justify-center">
-        <span className="text-gray-400">[ Map Preview ]</span>
+      <div className="relative h-64 md:h-80 bg-gray-200 rounded-xl overflow-hidden">
+        
+        {/* ✅ GAMBAR MAP */}
+        <img
+          src="/map.webp"
+          alt="Facility Map"
+          className="w-full h-full object-cover"
+        />
 
         {/* Legend */}
         <div className="absolute bottom-3 right-3 bg-white shadow rounded-xl p-3 text-sm space-y-2">

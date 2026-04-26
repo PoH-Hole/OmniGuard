@@ -32,13 +32,13 @@ export default function SensorsPage() {
 
         {/* SELECT MACHINE */}
         <select
-          className="w-full border p-2 rounded-lg bg-white"
+          className="w-full border p-2 rounded-lg bg-white mb-10"
           value={selectedAsset}
           onChange={(e) => setSelectedAsset(e.target.value)}
         >
-          <option value="tablet1">Tablet Press 01</option>
-          <option value="tablet2">Tablet Press 02</option>
-          <option value="tablet3">Tablet Press 03</option>
+          <option value="tablet1">Room A</option>
+          <option value="tablet2">Room B</option>
+          <option value="tablet3">Storage Room</option>
         </select>
 
         {/* DASHBOARD */}

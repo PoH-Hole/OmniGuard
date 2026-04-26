@@ -5,10 +5,17 @@ import { MapPin, CheckCircle } from "lucide-react";
 export default function WorkerCard() {
   return (
     <div className="bg-white rounded-2xl shadow-sm border p-4 space-y-4">
+      
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full bg-gray-300"></div>
+          
+          {/* FOTO */}
+          <img
+            src="/dr.sarah.webp"
+            alt="Dr. Sarah"
+            className="w-12 h-12 rounded-full object-cover"
+          />
 
           <div>
             <h3 className="font-semibold">Dr. Sarah Jenkins</h3>

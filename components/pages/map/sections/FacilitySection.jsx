@@ -14,18 +14,6 @@ export default function FacilitySection() {
             Real-time personnel tracking
           </p>
         </div>
-
-        <div className="flex gap-2">
-          <button className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm hover:bg-gray-100 transition">
-            <Layers size={16} />
-            Zones
-          </button>
-
-          <button className="flex items-center gap-2 px-3 py-2 border rounded-lg text-sm hover:bg-gray-100 transition">
-            <Flame size={16} />
-            Heatmap: On
-          </button>
-        </div>
       </div>
 
       {/* Map Preview */}
